@@ -1,0 +1,116 @@
+/* Root Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #181818;
+    color: white;
+    padding: 0.1rem;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    line-height: 1.5;
+}
+
+/* Header and Nav */
+.headerAndNav {
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1{
+    margin: 20px 20px 0px 20px;
+}
+
+header h3{
+    margin-left: 40px;
+    font-size: smaller;
+    color: #A076E1;
+}
+
+
+nav {
+    padding: 10px;
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    text-align: right;
+    text-decoration: underline #4ee1a0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline #A076E1;
+    cursor: pointer;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 150px;
+    margin: 20px;
+ }
+ 
+ img {
+    width: 150px;
+    margin: 20px;
+ }
+
+/* Main Starts Here */
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.container h2 {
+    flex: 0 0 200px; /* Fixed width for titles */
+    margin-right: 20px;
+    position: relative;
+}
+
+.container h2::after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #4ee1a0; /* Green line */
+}
+
+.container div {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.row > a > img {
+    border: #A076E1 solid 5px;
+}
+
+/* Footer starts Here */
