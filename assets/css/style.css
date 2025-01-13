@@ -59,9 +59,13 @@ nav ul li a:hover {
 }
 
 .profile-img {
-    border-radius: 50%;
-    width: 150px;
-    margin: 20px;
+    border-radius: 10%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center 30%; /* Moves the image down */
+    margin: 50px;
+
  }
  
  img {
@@ -70,7 +74,6 @@ nav ul li a:hover {
  }
 
 /* Main Starts Here */
-
 .container {
     display: flex;
     align-items: flex-start;
@@ -98,6 +101,13 @@ nav ul li a:hover {
     padding-left: 20px;
 }
 
+/* About Me Section */
+#aboutMeParagraph p {
+    width: 95%;
+    margin: 10px;
+}
+
+/* Work Section */
 .projects {
     display: flex;
     flex-direction: column;
@@ -111,6 +121,7 @@ nav ul li a:hover {
 
 .row > a > img {
     border: #A076E1 solid 5px;
+    width: 500px;
 }
 
 /* Footer starts Here */
