@@ -11,6 +11,10 @@
     padding: 0.1rem;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Space Grotesk', sans-serif;
     line-height: 1.5;
@@ -158,6 +162,10 @@ nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+#resumeImageBox {
+    margin: 25px 25px;
+}
+
 #downloadButton {
     text-decoration: none;
     color: black;
@@ -201,6 +209,11 @@ nav ul li a:hover {
         text-align: center;
     }
 
+    header h3 {
+        margin-left: 0;
+        text-align: center;
+    }
+
     nav ul {
         flex-direction: column;
         align-items: center;
@@ -234,6 +247,7 @@ nav ul li a:hover {
 
     #aboutMeParagraph p {
         width: 90%;
+        text-indent: 10px;
         text-align: justify;
     }
 }
@@ -267,6 +281,11 @@ nav ul li a:hover {
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+
+    .container div {
+        flex: 1;
+        padding-left: 0px;
     }
     
     .container h2 {
