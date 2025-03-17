@@ -81,6 +81,10 @@ nav ul li a:hover {
     padding: 20px;
 }
 
+.container-title {
+    align-items: left;
+}
+
 .container h2 {
     flex: 0 0 200px; /* Fixed width for titles */
     margin-right: 20px;
@@ -90,11 +94,12 @@ nav ul li a:hover {
 .container h2::after {
     content: '';
     position: absolute;
-    right: -10px;
-    top: 0;
-    bottom: 0;
+    left: calc(100% + 10px); /* Always positioned right of text */
+    top: 50%;
+    transform: translateY(-50%); /* Center the line */
     width: 2px;
-    background-color: #4ee1a0; /* Green line */
+    height: 80%;
+    background-color: #4ee1a0;
 }
 
 .container div {
@@ -186,4 +191,182 @@ nav ul li a:hover {
     position: relative;
     text-align: center;
     margin: 20px;
+}
+
+/* GENERAL RESPONSIVENESS */
+@media screen and (max-width: 1024px) {
+    .headerAndNav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .profile-img {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .container h2 {
+        flex: none;
+        margin-bottom: 10px;
+    }
+
+    .container h2::after {
+        flex-direction: row;
+    }
+
+    #aboutMeParagraph p {
+        width: 90%;
+        text-align: justify;
+    }
+}
+
+/* MOBILE SCREEN FIXES (Phones & Small Devices) */
+@media screen and (max-width: 768px) {
+    .headerAndNav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .profile-img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .container h2 {
+        flex: 1;
+        text-align: left;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        width: auto; /* Prevents stretching */
+        margin-left: 20px; /* Maintain left alignment */
+    }
+
+    .container h2::after {
+        flex-direction: row;
+        transform: translate(20px, -50%); /* Fix line placement */
+    }
+
+    #aboutMeParagraph {
+        width: 95%;
+    }
+
+    .projects .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .row > a > img {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    #contactInformation h3 {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .footer-content p {
+        font-size: 0.8rem;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    #resumeSection {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .resume-content-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    #resumeDownload {
+        text-align: center;
+        width: 100%;
+    }
+
+    #resumeImage {
+        width: 80%;  /* Adjusts size */
+        max-width: 300px;
+        display: block;
+        margin: 0 auto;  /* Ensures centering */
+    }
+
+    #downloadButton {
+        width: 80%;
+        text-align: center;
+        display: block;
+        margin: 15px auto;
+    }
+}
+
+/* VERY SMALL SCREENS (below 400px) */
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .row > a > img {
+        width: 100%;
+    }
+
+    #downloadButton {
+        width: 100%;
+        padding: 12px;
+    }
 }
