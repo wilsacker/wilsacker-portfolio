@@ -19,3 +19,19 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const textElement = document.getElementById("developerTitle");
+    const text = "Developer | Web Creator";
+    let index = 0;
+
+    function typeWriter() {
+        if (index < text.length) {
+            textElement.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeWriter, 100);
+        }
+    }
+
+    typeWriter();
+});
