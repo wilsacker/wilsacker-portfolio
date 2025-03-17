@@ -236,6 +236,11 @@ nav ul li a:hover {
         text-align: center;
     }
 
+    .container div {
+        flex: 1;
+        padding-left: 0px;
+    }
+
     .container h2 {
         flex: none;
         margin-bottom: 10px;
@@ -246,7 +251,6 @@ nav ul li a:hover {
     }
 
     #aboutMeParagraph p {
-        width: 90%;
         text-indent: 10px;
         text-align: justify;
     }
