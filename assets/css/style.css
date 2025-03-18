@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
 
 * {
-    margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: #181818;
@@ -85,25 +84,23 @@ nav ul li a:hover {
     padding: 20px;
 }
 
-.container-title {
-    align-items: left;
-}
-
 .container h2 {
     flex: 0 0 200px; /* Fixed width for titles */
     margin-right: 20px;
     position: relative;
+    display: inline-block; /* Ensures h2 takes the correct size */
 }
 
 .container h2::after {
     content: '';
     position: absolute;
-    left: calc(100% + 10px); /* Always positioned right of text */
+    left: calc(100% + 10px); /* Starts to the right of h2 */
     top: 50%;
-    transform: translateY(-50%); /* Center the line */
-    width: 2px;
-    height: 80%;
+    transform: translateY(-50%);
+    width: 2px; /* Thin vertical line initially */
+    height: 80%; /* Tall */
     background-color: #4ee1a0;
+    transition: all 0.4s ease-in-out; /* Smooth transition */
 }
 
 .container div {
@@ -243,15 +240,27 @@ nav ul li a:hover {
 
     .container h2 {
         flex: none;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
+        display: block; /* Ensures h2 takes full width */
+        text-align: center;
     }
 
     .container h2::after {
-        flex-direction: row;
+        left: 50%; /* Centers under h2 */
+        top: 100%; /* Moves below h2 */
+        width: 100%; /* Full width under h2 */
+        height: 4px; /* Becomes a thin underline */
+        transform: translateX(-50%); /* Ensures it stays centered */
     }
 
     #aboutMeParagraph p {
         text-indent: 10px;
+    }
+
+    #resumeSection {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 }
 
@@ -296,13 +305,12 @@ nav ul li a:hover {
         text-align: left;
         margin-bottom: 20px;
         margin-left: 20px;
-        width: auto; /* Prevents stretching */
-        margin-left: 20px; /* Maintain left alignment */
+        width: auto;
+        margin-left: 20px;
     }
 
     .container h2::after {
         flex-direction: row;
-        transform: translate(20px, -50%); /* Fix line placement */
     }
 
     #aboutMeParagraph {
@@ -390,5 +398,10 @@ nav ul li a:hover {
     #downloadButton {
         width: 100%;
         padding: 12px;
+    }
+
+    .container div {
+        flex: 1;
+        padding-left: 0px;
     }
 }
